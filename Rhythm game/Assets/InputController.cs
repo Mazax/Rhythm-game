@@ -3,6 +3,10 @@ using System.Collections;
 
 public class InputController : MonoBehaviour {
 	GameObject[] notes;
+	public float goalLX;
+	public float goalRX;
+	public float goalUY;
+	public float goalDY;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,11 +20,31 @@ public class InputController : MonoBehaviour {
 
 			for (int i = 0; i < notes.Length; i++){
 
-				//TODO Tämä ei toimi
-				if ((notes[i].transform.position.x > -64) || (notes[i].transform.position.x < 64)){
-
-					print("1 key was pressed at the right time!");
-				}
+				print("note 1: "+notes[i].GetComponent<NoteMovement>().InGoal() );
+			}
+		}
+		if (Input.GetKeyDown ("2")) {
+			notes = GameObject.FindGameObjectsWithTag("note2");
+			
+			for (int i = 0; i < notes.Length; i++){
+				
+				print("note 2: "+notes[i].GetComponent<NoteMovement>().InGoal() );
+			}
+		}
+		if (Input.GetKeyDown ("3")) {
+			notes = GameObject.FindGameObjectsWithTag("note3");
+			
+			for (int i = 0; i < notes.Length; i++){
+				
+				print("note 3: "+notes[i].GetComponent<NoteMovement>().InGoal() );
+			}
+		}
+		if (Input.GetKeyDown ("4")) {
+			notes = GameObject.FindGameObjectsWithTag("note4");
+			
+			for (int i = 0; i < notes.Length; i++){
+				
+				print("note 4: "+notes[i].GetComponent<NoteMovement>().InGoal() );
 			}
 		}
 	}

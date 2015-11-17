@@ -409,7 +409,7 @@ GameObject:
   - 114: {fileID: 810495989}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: note4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,6 +439,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSpeed: -5
   YSpeed: 0
+  goalLX: 0
+  goalRX: 64
+  goalUY: 64
+  goalDY: 0
 --- !u!212 &810495990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -477,7 +481,7 @@ GameObject:
   - 114: {fileID: 1075098640}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: note2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,6 +511,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSpeed: 0
   YSpeed: -5
+  goalLX: -64
+  goalRX: 0
+  goalUY: 64
+  goalDY: 0
 --- !u!212 &1075098641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -618,6 +626,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125185a9df6a5934ca6426400a0f7b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goalLX: 0
+  goalRX: 0
+  goalUY: 0
+  goalDY: 0
 --- !u!1 &1264994132
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +750,7 @@ GameObject:
   - 114: {fileID: 1667214910}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: note3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,6 +780,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSpeed: 0
   YSpeed: 5
+  goalLX: 0
+  goalRX: 64
+  goalUY: 0
+  goalDY: -64
 --- !u!212 &1667214911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -822,8 +838,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8425f6b64fefba44fa0b0e9de4f4674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: 5
+  XSpeed: 1
   YSpeed: 0
+  goalLX: -64
+  goalRX: 0
+  goalUY: 0
+  goalDY: -64
 --- !u!212 &1749817381
 SpriteRenderer:
   m_ObjectHideFlags: 0
