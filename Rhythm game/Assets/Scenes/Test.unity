@@ -207,6 +207,7 @@ GameObject:
   - 92: {fileID: 269169738}
   - 124: {fileID: 269169737}
   - 81: {fileID: 269169736}
+  - 114: {fileID: 269169741}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -279,6 +280,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &269169741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269169735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125185a9df6a5934ca6426400a0f7b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalLX: 0
+  goalRX: 0
+  goalUY: 0
+  goalDY: 0
 --- !u!1 &430477599
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +424,7 @@ GameObject:
   - 212: {fileID: 810495990}
   - 114: {fileID: 810495989}
   m_Layer: 0
-  m_Name: Note
+  m_Name: Note4
   m_TagString: note4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,15 +450,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 810495987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8425f6b64fefba44fa0b0e9de4f4674a, type: 3}
+  m_Script: {fileID: 11500000, guid: ece2028358830b9468a0068fddf25c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: -5
-  YSpeed: 0
-  goalLX: 0
-  goalRX: 64
-  goalUY: 64
-  goalDY: 0
+  Speed: 5
 --- !u!212 &810495990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -480,7 +491,7 @@ GameObject:
   - 212: {fileID: 1075098641}
   - 114: {fileID: 1075098640}
   m_Layer: 0
-  m_Name: Note
+  m_Name: Note2
   m_TagString: note2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,15 +517,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075098638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8425f6b64fefba44fa0b0e9de4f4674a, type: 3}
+  m_Script: {fileID: 11500000, guid: 44407c42e3fd24e4a8814d06dc1542ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: 0
-  YSpeed: -5
-  goalLX: -64
-  goalRX: 0
-  goalUY: 64
-  goalDY: 0
+  Speed: 5
 --- !u!212 &1075098641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -552,7 +558,6 @@ GameObject:
   - 33: {fileID: 1107335966}
   - 64: {fileID: 1107335965}
   - 23: {fileID: 1107335964}
-  - 114: {fileID: 1107335968}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -570,7 +575,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 20db4be5f02613942a2196c19b6b4787, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -609,27 +614,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107335963}
-  m_LocalRotation: {x: .70710659, y: 0, z: 0, w: -.707106948}
+  m_LocalRotation: {x: .270597994, y: .65328145, z: -.65328145, w: -.270598263}
   m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!114 &1107335968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1107335963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125185a9df6a5934ca6426400a0f7b0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goalLX: 0
-  goalRX: 0
-  goalUY: 0
-  goalDY: 0
 --- !u!1 &1264994132
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +739,7 @@ GameObject:
   - 212: {fileID: 1667214911}
   - 114: {fileID: 1667214910}
   m_Layer: 0
-  m_Name: Note
+  m_Name: Note3
   m_TagString: note3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,15 +765,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1667214908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8425f6b64fefba44fa0b0e9de4f4674a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1994f57d90ed0b74897cd2627bc5a402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: 0
-  YSpeed: 5
-  goalLX: 0
-  goalRX: 64
-  goalUY: 0
-  goalDY: -64
+  Speed: 5
 --- !u!212 &1667214911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -821,7 +806,7 @@ GameObject:
   - 212: {fileID: 1749817381}
   - 114: {fileID: 1749817380}
   m_Layer: 0
-  m_Name: Note
+  m_Name: Note1
   m_TagString: note1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -838,12 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8425f6b64fefba44fa0b0e9de4f4674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: 1
-  YSpeed: 0
-  goalLX: -64
-  goalRX: 0
-  goalUY: 0
-  goalDY: -64
+  Speed: 5
 --- !u!212 &1749817381
 SpriteRenderer:
   m_ObjectHideFlags: 0
