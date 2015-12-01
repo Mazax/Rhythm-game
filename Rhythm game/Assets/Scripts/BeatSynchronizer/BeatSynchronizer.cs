@@ -3,7 +3,7 @@ using System.Collections;
 
 /// <summary>
 /// This class should be attached to the audio source for which synchronization should occur, and is 
-/// responsible for synching up the beginning of the audio clip with all active beat counters and pattern counters.
+// responsible for synching up the beginning of the audio clip with all active beat counters and pattern counters.
 /// </summary>
 [RequireComponent(typeof(AudioSource))]
 public class BeatSynchronizer : MonoBehaviour {
