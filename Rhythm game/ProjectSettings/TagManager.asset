@@ -8,6 +8,10 @@ TagManager:
   - note2
   - note3
   - note4
+  - spawner1
+  - spawner2
+  - spawner3
+  - spawner4
   layers:
   - Default
   - TransparentFX

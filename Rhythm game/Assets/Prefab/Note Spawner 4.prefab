@@ -25,9 +25,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 403928}
+  - 114: {fileID: 11452414}
   m_Layer: 0
   m_Name: Note Spawner 4
-  m_TagString: Untagged
+  m_TagString: spawner4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +58,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403928}
   m_RootOrder: 0
+--- !u!114 &11452414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d72b5315825c94391fa1dcd3324291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 104494, guid: c42c1d99554a8ab46a892427ca79a0ef, type: 2}
 --- !u!114 &11462016
 MonoBehaviour:
   m_ObjectHideFlags: 1

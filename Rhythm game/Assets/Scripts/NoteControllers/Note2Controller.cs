@@ -4,8 +4,9 @@ using System.Collections;
 public class Note2Controller : MonoBehaviour {
 
 	public float Speed;
-	
-	float goalLX = -64;
+    SpawnController2 sc;
+
+    float goalLX = -64;
 	float goalRX = 0;
 	float goalUY = 64;
 	float goalDY = 0;
@@ -13,7 +14,9 @@ public class Note2Controller : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		transform.position += new Vector3(0,-Speed,0);
-	}
+        GameObject s1 = GameObject.FindWithTag("spawner2");
+        sc = s1.GetComponent<SpawnController2>();
+    }
 	
 	public float InGoal(){
 		//Look if note is in goal and if is give a score and destroy gameObject
@@ -25,7 +28,8 @@ public class Note2Controller : MonoBehaviour {
 					result = 0;
 				}else{
 					Destroy(gameObject);
-				}
+                    sc.CreateNote();
+                }
 			return result;
 			}else{
 				return 0;

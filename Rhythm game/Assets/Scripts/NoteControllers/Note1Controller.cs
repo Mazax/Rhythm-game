@@ -1,18 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Note1Controller : MonoBehaviour {
 
 	public float Speed;
+    SpawnController1 sc;
 
 	float goalLX = -64;
 	float goalRX = 0;
 	float goalUY = 0;
 	float goalDY = -64;
 
-	// Update is called once per frame
-	void FixedUpdate () {
+    
+
+    // Update is called once per frame
+    void FixedUpdate () {
 		transform.position += new Vector3(Speed,0,0);
+        GameObject s1 = GameObject.FindWithTag("spawner1");
+        sc = s1.GetComponent<SpawnController1>();
 	}
 
 	public float InGoal(){
@@ -25,7 +31,8 @@ public class Note1Controller : MonoBehaviour {
 					result = 0;
 				}else{
 					Destroy(gameObject);
-				}
+                    sc.CreateNote();
+                }
 			return result;
 			}else{
 				return 0;
