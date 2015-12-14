@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class InputController : MonoBehaviour {
 	GameObject[] notes;
 	public float goalLX;
 	public float goalRX;
 	public float goalUY;
 	public float goalDY;
+
+	public AudioClip impact;
+	AudioSource audIo;
+
 	// Use this for initialization
 	void Start () {
-	
+		audIo = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -39,7 +44,7 @@ public class InputController : MonoBehaviour {
 
 		if (Input.GetKeyDown ("3")) {
 			notes = GameObject.FindGameObjectsWithTag("note3");
-			
+			GetComponent<AudioSource>().PlayOneShot(impact,0.4f);
 			for (int i = 0; i < notes.Length; i++){
 				
 				float points = notes[i].GetComponent<Note3Controller>().InGoal();
@@ -50,8 +55,9 @@ public class InputController : MonoBehaviour {
 		}
 		if (Input.GetKeyDown ("4")) {
 			notes = GameObject.FindGameObjectsWithTag("note4");
-			
+			GetComponent<AudioSource>().PlayOneShot(impact,0.4f);
 			for (int i = 0; i < notes.Length; i++){
+
 				float points = notes[i].GetComponent<Note4Controller>().InGoal();
 				if (points > 0){
 					print("note 4: "+points );

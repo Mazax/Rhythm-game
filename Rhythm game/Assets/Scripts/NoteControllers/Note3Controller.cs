@@ -4,7 +4,7 @@ using System.Collections;
 public class Note3Controller: MonoBehaviour {
 
 	public float Speed;
-    SpawnController3 sc;
+   // SpawnController3 sc;
 
     float goalLX = 0;
 	float goalRX = 64;
@@ -15,7 +15,7 @@ public class Note3Controller: MonoBehaviour {
 	void FixedUpdate () {
 		transform.position += new Vector3(0,Speed,0);
         GameObject s1 = GameObject.FindWithTag("spawner3");
-        sc = s1.GetComponent<SpawnController3>();
+        //sc = s1.GetComponent<SpawnController3>();
     }
 	
 	public float InGoal(){
@@ -28,7 +28,7 @@ public class Note3Controller: MonoBehaviour {
 					result = 0;
 				}else{
 					Destroy(gameObject);
-                    sc.CreateNote();
+                   // sc.CreateNote();
                 }
 				return result;
 			}else{
