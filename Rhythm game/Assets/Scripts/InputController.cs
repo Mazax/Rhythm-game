@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class InputController : MonoBehaviour {
 	GameObject[] notes;
+    public GameObject textObject;
 	public float goalLX;
 	public float goalRX;
 	public float goalUY;
 	public float goalDY;
+
+    float playerPoints;
 
 	public AudioClip impact;
 	AudioSource audIo;
@@ -25,9 +29,12 @@ public class InputController : MonoBehaviour {
 
 			for (int i = 0; i < notes.Length; i++){
 				float points = notes[i].GetComponent<Note1Controller>().InGoal();
-				if (points > 0){
-					print("note 1: "+points );
-				}
+                playerPoints += points;
+
+                if (points > 0){
+					print("note 1: "+ points);
+                    PrintPoints();
+                }
 			}
 		}
 
@@ -36,9 +43,11 @@ public class InputController : MonoBehaviour {
 			
 			for (int i = 0; i < notes.Length; i++){
 				float points = notes[i].GetComponent<Note2Controller>().InGoal();
-				if (points > 0){
-					print("note 2: "+points );
-				}
+                playerPoints += points;
+                if (points > 0){
+					print("note 2: "+ points);
+                    PrintPoints();
+                }
 			}
 		}
 
@@ -48,9 +57,11 @@ public class InputController : MonoBehaviour {
 			for (int i = 0; i < notes.Length; i++){
 				
 				float points = notes[i].GetComponent<Note3Controller>().InGoal();
-				if (points > 0){
+                playerPoints += points;
+                if (points > 0){
 					print("note 3: "+points );
-				}
+                    PrintPoints();
+                }
 			}
 		}
 		if (Input.GetKeyDown ("4")) {
@@ -59,10 +70,16 @@ public class InputController : MonoBehaviour {
 			for (int i = 0; i < notes.Length; i++){
 
 				float points = notes[i].GetComponent<Note4Controller>().InGoal();
-				if (points > 0){
+                playerPoints += points;
+                if (points > 0){
 					print("note 4: "+points );
-				}
+                    PrintPoints();
+                }
 			}
 		}
 	}
+
+    public void PrintPoints() {
+        textObject.GetComponent<Text>().text = "Points: " + (int)playerPoints;
+    }
 }
