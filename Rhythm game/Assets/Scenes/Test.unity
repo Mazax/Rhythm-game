@@ -327,7 +327,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269169735}
-  m_LocalRotation: {x: 0, y: 0, z: -.382683456, w: .923879504}
+  m_LocalRotation: {x: 0, y: 0, z: .382683456, w: .923879504}
   m_LocalPosition: {x: 0, y: 0, z: -426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -348,10 +348,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObject: {fileID: 570795130}
-  goalLX: 0
-  goalRX: 0
-  goalUY: 0
-  goalDY: 0
+  sparks: {fileID: 0}
+  goal1: {fileID: 0}
+  goal2: {fileID: 0}
+  goal3: {fileID: 0}
+  goal4: {fileID: 0}
   impact: {fileID: 0}
 --- !u!1001 &370905072
 Prefab:
@@ -429,7 +430,7 @@ Transform:
   - {fileID: 1842992696}
   - {fileID: 707148861}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &570795130
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,80 +759,6 @@ MonoBehaviour:
   loopTime: 30
   audioSource: {fileID: 0}
   observers: []
---- !u!1 &1058144067
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1058144071}
-  - 114: {fileID: 1058144070}
-  - 114: {fileID: 1058144069}
-  - 114: {fileID: 1058144068}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1058144068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1058144067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
---- !u!114 &1058144069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1058144067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: .5
-  m_ForceModuleActive: 0
---- !u!114 &1058144070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1058144067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &1058144071
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1058144067}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
 --- !u!1 &1107335963
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,12 +828,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107335963}
-  m_LocalRotation: {x: .270597994, y: .65328145, z: -.65328145, w: -.270598263}
+  m_LocalRotation: {x: -.270598412, y: .653281629, z: -.653281331, w: .270597905}
   m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1139416493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,10 +1172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObject: {fileID: 570795130}
-  goalLX: 0
-  goalRX: 0
-  goalUY: 0
-  goalDY: 0
+  sparks: {fileID: 169888, guid: 062e0599636c65542881e9e728d25572, type: 2}
+  goal1: {fileID: 52662774}
+  goal2: {fileID: 1371431907}
+  goal3: {fileID: 137262576}
+  goal4: {fileID: 1264994133}
   impact: {fileID: 8300000, guid: 40a05fdca5f8e2043abcc719a821a0bd, type: 3}
 --- !u!82 &1672932247
 AudioSource:

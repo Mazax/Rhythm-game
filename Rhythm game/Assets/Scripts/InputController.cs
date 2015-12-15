@@ -4,12 +4,15 @@ using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 public class InputController : MonoBehaviour {
+
 	GameObject[] notes;
     public GameObject textObject;
-	public float goalLX;
-	public float goalRX;
-	public float goalUY;
-	public float goalDY;
+    public GameObject sparks;
+
+    public Transform goal1;
+    public Transform goal2;
+    public Transform goal3;
+    public Transform goal4;
 
     float playerPoints = 0;
 
@@ -32,6 +35,7 @@ public class InputController : MonoBehaviour {
                 playerPoints += points;
                 if (points > 0){
 					print("note 1: "+points );
+                    Instantiate(sparks, goal1.position, goal1.rotation);
                     PrintPoitns();
                 }
 			}
@@ -45,6 +49,7 @@ public class InputController : MonoBehaviour {
                 playerPoints += points;
                 if (points > 0){
 					print("note 2: "+points );
+                    Instantiate(sparks, goal2.position, goal2.rotation);
                     PrintPoitns();
                 }
 			}
@@ -61,6 +66,7 @@ public class InputController : MonoBehaviour {
                 playerPoints += points;
                 if (points > 0){
 					print("note 3: "+points );
+                    Instantiate(sparks, goal3.position, goal3.rotation);
                     PrintPoitns();
                 }
 			}
@@ -76,6 +82,7 @@ public class InputController : MonoBehaviour {
                 playerPoints += points;
                 if (points > 0){
 					print("note 4: "+points );
+                    Instantiate(sparks, goal4.position, new Quaternion(goal4.rotation.eulerAngles.x, goal4.rotation.eulerAngles.y, goal4.rotation.eulerAngles.z, 0));
                     PrintPoitns();
                 }
 			}
