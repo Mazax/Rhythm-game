@@ -43,8 +43,10 @@ public class InputController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown ("3")) {
-			notes = GameObject.FindGameObjectsWithTag("note3");
-			GetComponent<AudioSource>().PlayOneShot(impact,0.4f);
+            GetComponent<AudioSource>().PlayOneShot(impact, 0.4f);
+
+            notes = GameObject.FindGameObjectsWithTag("note3");
+			
 			for (int i = 0; i < notes.Length; i++){
 				
 				float points = notes[i].GetComponent<Note3Controller>().InGoal();
@@ -54,8 +56,10 @@ public class InputController : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown ("4")) {
-			notes = GameObject.FindGameObjectsWithTag("note4");
-			GetComponent<AudioSource>().PlayOneShot(impact,0.4f);
+            GetComponent<AudioSource>().PlayOneShot(impact, 0.4f);
+
+            notes = GameObject.FindGameObjectsWithTag("note4");
+			
 			for (int i = 0; i < notes.Length; i++){
 
 				float points = notes[i].GetComponent<Note4Controller>().InGoal();
